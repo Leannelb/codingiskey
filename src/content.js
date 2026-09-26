@@ -9,7 +9,7 @@ export const profile = {
   linkedin: 'https://www.linkedin.com/in/leannelaceybyrne/',
   youtube: 'https://www.youtube.com/c/lillycode',
   // Drop files into /public and set these, e.g. '/leanne.jpg' and '/Leanne-CV.pdf'.
-  photo: null,
+  photo: '/leanne.jpg',
   cv: null,
 }
 

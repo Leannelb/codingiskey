@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { profile, about, skills, caseStudies, process, journey, learning } from './content.js'
 
 function Nav() {
@@ -19,11 +20,12 @@ function Nav() {
 }
 
 function Polaroid() {
+  const [photoFailed, setPhotoFailed] = useState(false)
   return (
     <figure className="polaroid">
       <span className="tape tape-top" />
-      {profile.photo ? (
-        <img src={profile.photo} alt={profile.name} />
+      {profile.photo && !photoFailed ? (
+        <img src={profile.photo} alt={profile.name} onError={() => setPhotoFailed(true)} />
       ) : (
         <div className="photo-placeholder" aria-label="Photo coming soon">
           <span>LLB</span>
