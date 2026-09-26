@@ -14,7 +14,7 @@ export const profile = {
 }
 
 export const about = [
-  "I'm a full-stack developer working across React, Angular, Java and Spring Boot. I hold a double honours degree in Computer Science and Biology, and I'm currently completing a master's in Big Data.",
+  "I'm a full-stack developer working across React, Angular, Java and Spring Boot. I hold a double honours degree in Computer Science and Biology, a master's in Immunology & Global Health, and a certificate in Big Data from Wrexham University.",
   "I didn't take the usual route into software. I started in biotech as a process technologist and bioprocess scientist, moved into QC and QA, and then became a developer. Years of writing SOPs and chasing defects taught me to care about the details and the people who rely on the finished product.",
   "Lately I've been building with AI: agentic workflows, fine-tuning models, and putting LLMs into real products. I'm also a certified Scrum Master, so I'm as comfortable running a sprint as I am writing the code.",
 ]
