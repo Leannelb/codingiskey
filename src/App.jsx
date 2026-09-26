@@ -86,39 +86,6 @@ function About() {
   )
 }
 
-function Preview({ kind }) {
-  if (kind === 'coverly') {
-    return (
-      <div className="preview preview-coverly">
-        <div className="chrome"><i /><i /><i /></div>
-        <div className="pv-body">
-          <strong>Your health cover, finally explained.</strong>
-          <span>Referrals · Specialists · Rebates</span>
-          <em>Join the waitlist</em>
-        </div>
-      </div>
-    )
-  }
-  if (kind === 'eliatra') {
-    return (
-      <div className="preview preview-eliatra">
-        <div className="chrome"><i /><i /><i /></div>
-        <div className="pv-body">
-          <strong>The OpenSearch Experts</strong>
-          <span>Encryption at Rest · Coretex Axiom</span>
-          <em>Get in touch</em>
-        </div>
-      </div>
-    )
-  }
-  return (
-    <div className="preview preview-youtube">
-      <div className="play">▶</div>
-      <strong>LillyCode</strong>
-    </div>
-  )
-}
-
 function Work() {
   return (
     <section className="section section-tint" id="work">
@@ -127,7 +94,9 @@ function Work() {
         <div className="case-grid">
           {caseStudies.map((c) => (
             <article className="card case-card" key={c.name}>
-              <Preview kind={c.kind} />
+              <a className="thumb" href={c.link} target="_blank" rel="noreferrer" tabIndex={-1}>
+                <img src={c.image} alt={`${c.name} screenshot`} loading="lazy" />
+              </a>
               <div className="case-body">
                 <h3>{c.name}</h3>
                 <p>{c.blurb}</p>

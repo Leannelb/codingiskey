@@ -126,20 +126,9 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
 .link { margin-top: auto; font-weight: 600; color: var(--lavender-ink); text-decoration: none; }
 .link:hover { text-decoration: underline; }
 
-.preview { aspect-ratio: 16 / 10; position: relative; display: flex; flex-direction: column; border-bottom: 1px solid var(--line); }
-.chrome { display: flex; gap: 5px; padding: 10px 12px; }
-.chrome i { width: 8px; height: 8px; border-radius: 50%; background: currentColor; opacity: 0.35; }
-.pv-body { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 8px; padding: 0 24px 16px; }
-.pv-body strong { font-family: var(--serif); font-size: 1.3rem; line-height: 1.2; }
-.pv-body span { font-size: 0.8rem; opacity: 0.75; }
-.pv-body em { font-style: normal; font-size: 0.78rem; font-weight: 600; align-self: flex-start; padding: 6px 12px; border-radius: 999px; }
-.preview-coverly { background: #eef2ee; color: #2f4a3f; }
-.preview-coverly em { background: #2f4a3f; color: #fff; }
-.preview-eliatra { background: #26303d; color: #e6e9ee; }
-.preview-eliatra em { background: #a9bcd3; color: #26303d; }
-.preview-youtube { background: var(--plum-deep); color: #fff; align-items: center; justify-content: center; gap: 12px; }
-.preview-youtube strong { font-family: var(--serif); font-size: 1.5rem; }
-.play { width: 64px; height: 44px; border-radius: 12px; background: var(--rose); display: grid; place-items: center; font-size: 1.1rem; padding-left: 3px; }
+.thumb { display: block; aspect-ratio: 16 / 10; overflow: hidden; border-bottom: 1px solid var(--line); background: var(--cream); }
+.thumb img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; transition: transform 0.4s; }
+.case-card:hover .thumb img { transform: scale(1.03); }
 
 /* How I work */
 .sub { color: var(--lavender-ink); font-size: 1.7rem; margin-top: 56px; }

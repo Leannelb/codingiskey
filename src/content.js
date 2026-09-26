@@ -41,7 +41,7 @@ export const skills = [
 export const caseStudies = [
   {
     name: 'Coverly',
-    kind: 'coverly',
+    image: '/work/coverly.jpg',
     blurb:
       "A health-insurance navigator for Irish patients. I built the waitlist landing page and a working prototype in React, covering policy onboarding, matching a referral to a specialist, tracking bookings, and a rebate calculator.",
     tags: ['React', 'Vite', 'Tailwind', 'Product design'],
@@ -50,7 +50,7 @@ export const caseStudies = [
   },
   {
     name: 'Eliatra',
-    kind: 'eliatra',
+    image: '/work/eliatra.jpg',
     blurb:
       'Custom development and support for OpenSearch, including the Encryption at Rest plugin and Coretex Axiom, an on-premise AI platform for document processing.',
     tags: ['OpenSearch', 'Java', 'AI', 'Enterprise'],
@@ -59,7 +59,7 @@ export const caseStudies = [
   },
   {
     name: 'LillyCode on YouTube',
-    kind: 'youtube',
+    image: '/work/lillycode.jpg',
     blurb:
       "My channel, where I share what I'm learning about code, from web development basics to the tools I use every day.",
     tags: ['Teaching', 'Content', 'Community'],
