@@ -174,7 +174,7 @@ function Contact() {
           Teaching: <a href={profile.youtube} target="_blank" rel="noreferrer">LillyCode on YouTube</a>
         </p>
         <p className="copyright">
-          © {new Date().getFullYear()} · {profile.name} · Senior Software Engineer @ {profile.company} ·{' '}
+          © {new Date().getFullYear()} · {profile.name} · Senior Software Engineer ·{' '}
           <a href="/v1/" target="_blank" rel="noreferrer">See codingiskey v1 (2018)</a>
         </p>
       </div>
