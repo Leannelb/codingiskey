@@ -186,7 +186,6 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
 }
 
 /* Staff positioning additions */
-.hero-company { color: var(--lavender-ink); }
 .hero-intro { color: var(--ink); max-width: 560px; margin-bottom: 1.1em; }
 .creds { list-style: none; padding: 0; margin: 0 0 1.1em; display: flex; flex-wrap: wrap; gap: 8px; }
 .creds li {

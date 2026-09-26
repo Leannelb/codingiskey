@@ -3,11 +3,12 @@
 export const profile = {
   name: 'Leanne Lacey-Byrne',
   firstName: 'Leanne',
-  role: 'Staff-track Frontend / AI Platform Engineer',
+  role: 'Frontend / AI Platform Engineer',
   company: 'Fidelity Investments',
   intro:
     'Senior Software Engineer building large-scale financial platforms for millions of customers. 8 years shipping high-availability platforms in fintech, payments and AI search: React, TypeScript, OpenSearch, AWS.',
   credentials: [
+    'Senior Developer @ Fidelity Investments',
     'Ex-Lead Developer @ Eliatra (AI Search)',
     'Ex-Frontend & Scrum Master @ Clover (Fiserv)',
     'OSMC Speaker 2023 & 2024',
@@ -25,7 +26,7 @@ export const profile = {
 
 export const about = [
   "I'm a Senior Software Engineer at Fidelity Investments, building large-scale financial platforms for millions of customers around the world.",
-  'I specialise in Staff-level frontend platform work: React and TypeScript, reusable component libraries and design systems, quality at scale (Jest, Vite, Cypress), and AI search platforms (OpenSearch/Elasticsearch, GraphQL, AWS).',
+  'I specialise in frontend platform work: React and TypeScript, reusable component libraries and design systems, quality at scale (Jest, Vite, Cypress), and AI search platforms (OpenSearch/Elasticsearch, GraphQL, AWS).',
   'Before Fidelity I was Lead Developer at Eliatra. I owned the React data and search platform and the mid-tier integrations for AI-driven products, drove the testing strategy with Jest and Vite, and designed scalable, highly available systems with AWS engineers. I spoke at OSMC in 2023 and 2024 on AI automation, security and frontend integration.',
   'Before that I was Frontend Developer and Scrum Master at Clover (Fiserv), an enterprise payments platform used by millions of merchants. I built Angular features and a component library while leading agile delivery for two teams in a regulated, high-availability environment.',
   "I'm a certified Scrum Master (PSM I), on the Pursuit of Excellence in Leadership programme (2025 to present), and a Women in Tech speaker (WIN Spotlight, and Newstalk with Jess Kelly).",

@@ -45,11 +45,7 @@ function Hero() {
           <h1>
             Hi! I am <span className="accent">{profile.firstName}</span>,
           </h1>
-          <p className="hero-sub">
-            {profile.role}
-            <br />
-            <span className="hero-company">@ {profile.company}</span>
-          </p>
+          <p className="hero-sub">{profile.role}</p>
           <p className="hero-intro">{profile.intro}</p>
           <ul className="creds">{profile.credentials.map((c) => <li key={c}>{c}</li>)}</ul>
           <p className="hero-location">{profile.location}</p>
@@ -146,9 +142,9 @@ function HowIWork() {
         </div>
         <p className="loop">↺ Repeat with every piece of feedback</p>
 
-        <h3 className="sub">From Lab to Staff Engineer</h3>
+        <h3 className="sub">From the Lab to the Web</h3>
         <p className="lead">
-          Science taught me to work from evidence, QA taught me rigour, and consulting taught me client delivery. Now I set the direction teams follow, not just the features they ship.
+          I didn't take the usual route into software, and it shows in how I work. Science taught me to use evidence, QA taught me to be rigorous, and consulting taught me to talk to clients.
         </p>
 
         <h3 className="sub">Always Learning</h3>
@@ -163,11 +159,11 @@ function Contact() {
     <footer className="contact" id="contact">
       <div className="wrap">
         <p className="eyebrow eyebrow-pink">Let's talk</p>
-        <h2>Staff and Lead roles</h2>
+        <h2>Thanks for reading.</h2>
         <p>
-          I'm open to Staff and Lead Frontend or Platform Engineer roles, either hybrid in Dublin (up to 2 days on-site) or remote across the EU and US.
+          I'm always happy to talk about AI projects and collaborations.
           <br />
-          I'm especially interested in AI platforms, search and fintech.
+          Let's build something great together.
         </p>
         <div className="contact-links">
           <a href={`mailto:${profile.email}`}>{profile.email}</a>
