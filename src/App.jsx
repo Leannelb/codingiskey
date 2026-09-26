@@ -162,7 +162,10 @@ function Contact() {
           <a href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
           <a href={profile.youtube} target="_blank" rel="noreferrer">YouTube</a>
         </div>
-        <p className="copyright">© {new Date().getFullYear()} · {profile.name}</p>
+        <p className="copyright">
+          © {new Date().getFullYear()} · {profile.name} ·{' '}
+          <a href="/v1/" target="_blank" rel="noreferrer">See codingiskey v1 (2018)</a>
+        </p>
       </div>
     </footer>
   )

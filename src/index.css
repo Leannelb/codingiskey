@@ -164,6 +164,8 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
 .contact-links a:hover { border-color: var(--lavender); color: var(--lavender); }
 .contact-links a:first-child:hover { color: var(--plum-deep); filter: brightness(1.05); }
 .copyright { font-size: 0.85rem; margin: 0; }
+.copyright a { color: var(--footer-text); }
+.copyright a:hover { color: #fff; }
 
 /* Responsive */
 @media (max-width: 900px) {
