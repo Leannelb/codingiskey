@@ -1,11 +1,21 @@
 // All the site copy lives here so it can be edited without touching layout code.
 
 export const profile = {
-  name: 'Leanne Lacey Byrne',
+  name: 'Leanne Lacey-Byrne',
   firstName: 'Leanne',
-  tagline: 'a full-stack developer who started out in a biotech lab.',
-  location: 'Based in Dublin, Ireland.',
-  email: 'leannelb111@gmail.com',
+  role: 'Staff-track Frontend / AI Platform Engineer',
+  company: 'Fidelity Investments',
+  intro:
+    'Senior Software Engineer building large-scale financial platforms for millions of customers. 8 years shipping high-availability platforms in fintech, payments and AI search: React, TypeScript, OpenSearch, AWS.',
+  credentials: [
+    'Ex-Lead Developer @ Eliatra (AI Search)',
+    'Ex-Frontend & Scrum Master @ Clover (Fiserv)',
+    'OSMC Speaker 2023 & 2024',
+    'Founder, Coverly',
+  ],
+  location: 'Based in Newbridge, Kildare · Hybrid, Citywest',
+  photoCaption: 'Kildare, Ireland',
+  email: 'leannelaceybyrne@outlook.com',
   linkedin: 'https://www.linkedin.com/in/leannelaceybyrne/',
   youtube: 'https://www.youtube.com/c/lillycode',
   // Drop files into /public and set these, e.g. '/leanne.jpg' and '/Leanne-CV.pdf'.
@@ -14,76 +24,102 @@ export const profile = {
 }
 
 export const about = [
-  "I'm a full-stack developer working across React, Angular, Java and Spring Boot. I hold a double honours degree in Computer Science and Biology, a master's in Immunology & Global Health, and a certificate in Big Data from Wrexham University.",
-  "I didn't take the usual route into software. I started in biotech as a process technologist and bioprocess scientist, moved into QC and QA, and then became a developer. Years of writing SOPs and chasing defects taught me to care about the details and the people who rely on the finished product.",
-  "Lately I've been building with AI: agentic workflows, fine-tuning models, and putting LLMs into real products. I'm also a certified Scrum Master, so I'm as comfortable running a sprint as I am writing the code.",
+  "I'm a Senior Software Engineer at Fidelity Investments, building large-scale financial platforms for millions of customers around the world.",
+  'I specialise in Staff-level frontend platform work: React and TypeScript, reusable component libraries and design systems, quality at scale (Jest, Vite, Cypress), and AI search platforms (OpenSearch/Elasticsearch, GraphQL, AWS).',
+  'Before Fidelity I was Lead Developer at Eliatra. I owned the React data and search platform and the mid-tier integrations for AI-driven products, drove the testing strategy with Jest and Vite, and designed scalable, highly available systems with AWS engineers. I spoke at OSMC in 2023 and 2024 on AI automation, security and frontend integration.',
+  'Before that I was Frontend Developer and Scrum Master at Clover (Fiserv), an enterprise payments platform used by millions of merchants. I built Angular features and a component library while leading agile delivery for two teams in a regulated, high-availability environment.',
+  "I'm a certified Scrum Master (PSM I), on the Pursuit of Excellence in Leadership programme (2025 to present), and a Women in Tech speaker (WIN Spotlight, and Newstalk with Jess Kelly).",
+  "I switched careers to get here. I spent six years in pharma and biotech as a process technologist, in QC and in QA, writing SOPs, chasing defects and helping scale a process by 250%. In 2018 I moved to Malta to break into tech and documented the journey as LillyCode on YouTube. Now I mentor women into engineering. I hold a double honours degree in Computer Science and Biology, a master's in Immunology & Global Health, and a certificate in Big Data from Wrexham University.",
+  'Lately I work on AI platform engineering: agentic workflows, LLM retrieval with OpenSearch, and Claude Code.',
 ]
 
 export const skills = [
   {
-    title: 'Frontend',
-    items: ['React', 'Angular', 'TypeScript', 'JavaScript', 'HTML & CSS', 'Reusable component libraries', 'UX & web design'],
+    title: 'Frontend Platform',
+    items: ['React', 'TypeScript', 'Redux', 'Angular', 'Design systems', 'Material UI', 'Tailwind', 'Reusable component libraries'],
   },
   {
-    title: 'Backend & Data',
-    items: ['Java', 'Spring Boot', 'REST API integration', 'SQL', 'Big Data analytics', 'OpenSearch'],
+    title: 'Quality & Delivery at Scale',
+    items: ['Jest', 'Vitest', 'Cypress', 'Code reviews', 'CI/CD: Git, Jenkins, GitLab, GitHub', 'AWS ECS/EKS', 'Docker'],
   },
   {
-    title: 'AI & Agentic Work',
-    items: ['Agentic workflows', 'Model fine-tuning', 'LLM integration', 'Prompt engineering', 'Claude Code', 'AI-assisted development'],
+    title: 'AI Search Platform',
+    items: ['OpenSearch', 'Elasticsearch', 'GraphQL', 'REST', 'AWS Lambda', 'LLM retrieval', 'Agentic workflows', 'Claude Code'],
   },
   {
-    title: 'Ways of Working',
-    items: ['Scrum (PSM I, SMC)', 'Agile delivery', 'Test planning & QA', 'Stakeholder management', 'Terminal & WebStorm power user'],
+    title: 'Leadership',
+    items: ['Scrum Master (2 teams)', 'Agile delivery', 'Stakeholder alignment', 'Mentorship', 'Technical writing', 'OSMC speaker'],
   },
 ]
+
+export const alsoSkills = 'Also: Java · Spring Boot · SQL · Big Data'
 
 export const caseStudies = [
   {
     name: 'Coverly',
+    role: 'Founder',
     image: '/work/coverly.jpg',
     blurb:
-      "A health-insurance navigator for Irish patients. I built the waitlist landing page and a working prototype in React, covering policy onboarding, matching a referral to a specialist, tracking bookings, and a rebate calculator.",
-    tags: ['React', 'Vite', 'Tailwind', 'Product design'],
+      'A health-insurance navigator for Irish patients. I built the waitlist site and a React prototype covering policy onboarding, specialist matching, booking tracking and a rebate calculator. Part of New Frontiers (Enterprise Ireland).',
+    tags: ['React', 'Vite', 'Tailwind', 'Product'],
     link: 'https://coverly.ie',
     cta: 'Visit Coverly →',
   },
   {
+    name: 'LillyCode on YouTube',
+    role: 'Creator',
+    image: '/work/lillycode.jpg',
+    blurb:
+      'The channel where I documented my move from biotech into tech, including 100 Days of Code, and where I share what I learn with people starting out.',
+    tags: ['Teaching', 'React', 'Community'],
+    link: 'https://www.youtube.com/c/lillycode',
+    cta: 'Watch on YouTube →',
+  },
+  {
     name: 'Eliatra',
+    role: 'Lead Developer · AI Search',
     image: '/work/eliatra.jpg',
     blurb:
-      'Custom development and support for OpenSearch, including the Encryption at Rest plugin and Coretex Axiom, an on-premise AI platform for document processing.',
-    tags: ['OpenSearch', 'Java', 'AI', 'Enterprise'],
+      'I owned the React and OpenSearch platform, set the testing strategy with Jest and Vite, and built highly available systems for AI workloads with AWS engineers. The work included Coretex Axiom, an on-premise AI platform for document processing.',
+    tags: ['React', 'TypeScript', 'OpenSearch', 'AWS', 'Jest'],
     link: 'https://eliatra.com',
     cta: 'Visit Eliatra →',
   },
+]
+
+// Set `link` on the fireside chat entry to show it on the site.
+export const talks = [
   {
-    name: 'LillyCode on YouTube',
-    image: '/work/lillycode.jpg',
-    blurb:
-      "My channel, where I share what I'm learning about code, from web development basics to the tools I use every day.",
-    tags: ['Teaching', 'Content', 'Community'],
-    link: 'https://www.youtube.com/c/lillycode',
-    cta: 'Watch on YouTube →',
+    name: 'Experiments with OpenSearch and AI',
+    event: 'OSMC 2023 · with Jochen Kressin',
+    image: '/work/osmc-2023.jpg',
+    blurb: 'How LLMs can make OpenSearch easier to use by turning plain-language questions into complex DSL queries.',
+    link: 'https://www.youtube.com/watch?v=wJC7vLcXRzY',
+    slides: 'https://www.slideshare.net/slideshow/osmc-2023-experiments-with-opensearch-and-ai-by-jochen-kressin-leanne-lacebyrne/263978317',
+  },
+  {
+    name: 'SecureAI: A Scalable, Secure, and Compliant AI Solution',
+    event: 'OSMC 2024 · with Lucas Jeanniot',
+    image: '/work/osmc-2024.jpg',
+    blurb: 'The architecture of an on-premise LLM platform, from data ingestion and vector embeddings to RAG, followed by a live demo.',
+    link: 'https://www.youtube.com/watch?v=uJ7YdA42RnE',
+    slides: 'https://www.slideshare.net/slideshow/osmc-2024-secureai-a-scalable-secure-and-compliant-ai-solution-by-leanne-lacey-byrne-lucas-jeannniot-pdf/273809293',
+  },
+  {
+    name: 'Fireside Chat',
+    event: '',
+    image: null,
+    blurb: '',
+    link: null,
   },
 ]
 
 export const process = [
-  '1 · Understand the problem',
-  '2 · Plan & break it down',
-  '3 · Build in small slices',
-  '4 · Test like a QA',
-  '5 · Ship & iterate',
-]
-
-export const journey = [
-  { role: 'Developer', note: 'Angular and React apps, API integration, reusable component libraries' },
-  { role: 'Developer & Project Manager', note: 'Owned delivery end to end, from sprint planning to release' },
-  { role: 'QA Tester', note: 'Test plans, defect tracking in Jira and Mantis, regression testing' },
-  { role: 'E-Learning Consultant', note: 'Managed client projects and built interactive web-based training' },
-  { role: 'QC Analyst', note: 'Wrote SOPs, analysed data and ran training at a company start-up' },
-  { role: 'Bioprocess Scientist', note: 'Designed and ran experiments, and volunteered as a biotechnology agent at Pfizer' },
-  { role: 'Process Technologist', note: 'Trained staff and helped scale up a process by about 250%' },
+  '1 · Understand the system & constraints (HA, compliance, performance)',
+  '2 · Define the paved road: RFC, design system, testing strategy',
+  '3 · Build in small slices that 2+ teams can reuse',
+  '4 · Quality as a platform: Jest, Vite, Cypress, code reviews, docs',
+  '5 · Ship, measure, mentor',
 ]
 
 export const learning =

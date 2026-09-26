@@ -1,17 +1,17 @@
 import { useState } from 'react'
-import { profile, about, skills, caseStudies, process, journey, learning } from './content.js'
+import { profile, about, skills, alsoSkills, caseStudies, talks, process, learning } from './content.js'
 
 function Nav() {
   return (
     <header className="nav">
       <div className="wrap nav-inner">
         <a href="#top" className="brand">
-          <span className="brand-mark">&lt;/&gt;</span> LillyCode
+          <span className="brand-mark">&lt;/&gt;</span> {profile.name}
         </a>
         <nav>
           <a href="#about">About</a>
           <a href="#work">Work</a>
-          <a href="#how">How I Work</a>
+          <a href="#talks">Talks</a>
           <a href="#contact">Contact</a>
         </nav>
       </div>
@@ -31,7 +31,7 @@ function Polaroid() {
           <span>LLB</span>
         </div>
       )}
-      <figcaption>Dublin, Ireland</figcaption>
+      <figcaption>{profile.photoCaption}</figcaption>
       <span className="tape tape-bottom" />
     </figure>
   )
@@ -46,17 +46,18 @@ function Hero() {
             Hi! I am <span className="accent">{profile.firstName}</span>,
           </h1>
           <p className="hero-sub">
-            {profile.tagline}
+            {profile.role}
             <br />
-            {profile.location}
+            <span className="hero-company">@ {profile.company}</span>
           </p>
+          <p className="hero-intro">{profile.intro}</p>
+          <ul className="creds">{profile.credentials.map((c) => <li key={c}>{c}</li>)}</ul>
+          <p className="hero-location">{profile.location}</p>
           <div className="btn-row">
-            <a className="btn btn-dark" href={`mailto:${profile.email}`}>✉ Contact me</a>
-            {profile.cv ? (
-              <a className="btn btn-light" href={profile.cv} download>⤓ Download my CV</a>
-            ) : (
-              <a className="btn btn-light" href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
-            )}
+            <a className="btn btn-dark" href="#work">View work</a>
+            <a className="btn btn-light" href="#talks">OSMC talks</a>
+            <a className="btn btn-light" href={`mailto:${profile.email}`}>✉ Contact me</a>
+            {profile.cv && <a className="btn btn-light" href={profile.cv} download>⤓ Download my CV</a>}
           </div>
         </div>
         <Polaroid />
@@ -80,6 +81,7 @@ function About() {
               <p>{s.items.join(' · ')}</p>
             </div>
           ))}
+          <p className="also">{alsoSkills}</p>
         </div>
       </div>
     </section>
@@ -98,10 +100,32 @@ function Work() {
                 <img src={c.image} alt={`${c.name} screenshot`} loading="lazy" />
               </a>
               <div className="case-body">
+                <p className="eyebrow">{c.role}</p>
                 <h3>{c.name}</h3>
                 <p>{c.blurb}</p>
                 <ul className="tags">{c.tags.map((t) => <li key={t}>{t}</li>)}</ul>
                 <a className="link" href={c.link} target="_blank" rel="noreferrer">{c.cta}</a>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <h2 className="talks-title" id="talks">Talks</h2>
+        <div className="case-grid">
+          {talks.filter((t) => t.link).map((t) => (
+            <article className="card case-card" key={t.name}>
+              <a className="thumb thumb-video" href={t.link} target="_blank" rel="noreferrer" tabIndex={-1}>
+                {t.image && <img src={t.image} alt={`${t.name} video`} loading="lazy" />}
+                <span className="play-badge" aria-hidden="true">▶</span>
+              </a>
+              <div className="case-body">
+                <p className="eyebrow">{t.event}</p>
+                <h3>{t.name}</h3>
+                <p>{t.blurb}</p>
+                <div className="talk-links">
+                  <a className="link" href={t.link} target="_blank" rel="noreferrer">Watch the talk →</a>
+                  {t.slides && <a className="link link-quiet" href={t.slides} target="_blank" rel="noreferrer">Slides</a>}
+                </div>
               </div>
             </article>
           ))}
@@ -115,29 +139,17 @@ function HowIWork() {
   return (
     <section className="section" id="how">
       <div className="wrap">
-        <h2>How I Work</h2>
-
-        <h3 className="sub">How I Build</h3>
-        <p className="lead">
-          I start by understanding the problem, then build in small pieces that can be tested. Testing isn't an afterthought for me. Years in QA mean I think about edge cases before I've written the code.
-        </p>
+        <h2>How I Build Platforms</h2>
+        <p className="lead lead-strong">I start with the platform problem, not the ticket.</p>
         <div className="steps">
           {process.map((s) => <div className="step" key={s}>{s}</div>)}
         </div>
         <p className="loop">↺ Repeat with every piece of feedback</p>
 
-        <h3 className="sub">From the Lab to the Web</h3>
+        <h3 className="sub">From Lab to Staff Engineer</h3>
         <p className="lead">
-          I didn't take the usual route into software, and it shows in how I work. Science taught me to use evidence, QA taught me to be rigorous, and consulting taught me to talk to clients.
+          Science taught me to work from evidence, QA taught me rigour, and consulting taught me client delivery. Now I set the direction teams follow, not just the features they ship.
         </p>
-        <ol className="journey">
-          {journey.map((j) => (
-            <li key={j.role}>
-              <strong>{j.role}</strong>
-              <span>{j.note}</span>
-            </li>
-          ))}
-        </ol>
 
         <h3 className="sub">Always Learning</h3>
         <p className="lead">{learning}</p>
@@ -151,19 +163,22 @@ function Contact() {
     <footer className="contact" id="contact">
       <div className="wrap">
         <p className="eyebrow eyebrow-pink">Let's talk</p>
-        <h2>Thanks for reading.</h2>
+        <h2>Staff and Lead roles</h2>
         <p>
-          I'm open to full-stack and frontend roles, AI projects and collaborations.
+          I'm open to Staff and Lead Frontend or Platform Engineer roles, either hybrid in Dublin (up to 2 days on-site) or remote across the EU and US.
           <br />
-          Let's build something great together.
+          I'm especially interested in AI platforms, search and fintech.
         </p>
         <div className="contact-links">
           <a href={`mailto:${profile.email}`}>{profile.email}</a>
           <a href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
-          <a href={profile.youtube} target="_blank" rel="noreferrer">YouTube</a>
+          <a href="https://coverly.ie" target="_blank" rel="noreferrer">coverly.ie</a>
         </div>
+        <p className="teaching">
+          Teaching: <a href={profile.youtube} target="_blank" rel="noreferrer">LillyCode on YouTube</a>
+        </p>
         <p className="copyright">
-          © {new Date().getFullYear()} · {profile.name} ·{' '}
+          © {new Date().getFullYear()} · {profile.name} · Senior Software Engineer @ {profile.company} ·{' '}
           <a href="/v1/" target="_blank" rel="noreferrer">See codingiskey v1 (2018)</a>
         </p>
       </div>
