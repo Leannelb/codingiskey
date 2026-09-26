@@ -55,7 +55,7 @@ function Hero() {
             {profile.cv ? (
               <a className="btn btn-light" href={profile.cv} download>⤓ Download my CV</a>
             ) : (
-              <a className="btn btn-light" href={profile.linkedin} target="_blank" rel="noreferrer">in LinkedIn</a>
+              <a className="btn btn-light" href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
             )}
           </div>
         </div>
